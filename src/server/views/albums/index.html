@@ -5,6 +5,46 @@
 {% block content %}
 
   <h1>Albums</h1>
+  <table class="table table-striped">
+    <thead>
+      <th>
+        Artist
+      </th>
+      <th>
+        Title
+      </th>
+      <th>
+        Genre
+      </th>
+      <th>
+        Stars
+      </th>
+      <th>
+        Explixit content
+      </th>
+    </thead>
+    <tbody>
+      {% for index in record %}
+      <tr>
+        <td>
+          {{index.artist}}
+        </td>
+        <td>
+          {{index.name}}
+        </td>
+        <td>
+          {{index.genre}}
+        </td>
+        <td>
+          {{index.stars}}
+        </td>
+        <td>
+          {{index.explicit}}
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
 
   <a href="/albums/new">New Album</a>
 
